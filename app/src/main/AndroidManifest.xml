@@ -3,11 +3,14 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+    <uses-permission android:name="moe.shizuku.manager.permission.API_V23" />
+    <uses-permission android:name="android.permission.INTERNET" />
     
     <application
         android:label="Junin Mods"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:icon="@android:drawable/ic_menu_compass">
+        android:icon="@drawable/ic_junin_logo"
+        android:roundIcon="@drawable/ic_junin_logo">
         
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
