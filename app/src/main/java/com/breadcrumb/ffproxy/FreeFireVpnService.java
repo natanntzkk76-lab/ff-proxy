@@ -198,7 +198,7 @@ public class FreeFireVpnService extends VpnService {
         }
         Notification notification = new Notification.Builder(this, channelId)
                 .setContentTitle("FF Proxy Active").setContentText("Sanitizing telemetry...")
-                .setSmallIcon(android.R.drawable.ic_menu_secure).build();
+                .setSmallIcon(android.R.drawable.ic_lock_lock).build();
         startForeground(1, notification);
     }
 }
