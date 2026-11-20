@@ -1,0 +1,108 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.breadcrumb.ffproxy"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:2:5-67
+11-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:2:22-64
+12    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+12-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:3:5-77
+12-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:3:22-74
+13    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
+13-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:4:5-89
+13-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:4:22-86
+14
+15    <permission
+15-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5b037636e3f812be483c43c83f34872a/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+16        android:name="com.breadcrumb.ffproxy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+16-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5b037636e3f812be483c43c83f34872a/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+17        android:protectionLevel="signature" />
+17-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5b037636e3f812be483c43c83f34872a/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+18
+19    <uses-permission android:name="com.breadcrumb.ffproxy.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+19-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5b037636e3f812be483c43c83f34872a/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+19-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5b037636e3f812be483c43c83f34872a/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+20
+21    <application
+21-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:5:5-16:19
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.9.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5b037636e3f812be483c43c83f34872a/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+23        android:debuggable="true"
+24        android:extractNativeLibs="false"
+25        android:label="FF Proxy"
+25-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:5:18-42
+26        android:theme="@style/Theme.AppCompat.Light" >
+26-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:5:43-87
+27        <activity
+27-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:6:9-11:20
+28            android:name="com.breadcrumb.ffproxy.MainActivity"
+28-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:6:19-47
+29            android:exported="true" >
+29-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:6:48-71
+30            <intent-filter>
+30-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:7:13-10:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:8:17-69
+31-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:8:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:9:17-77
+33-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:9:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <service
+37-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:12:9-15:19
+38            android:name="com.breadcrumb.ffproxy.FreeFireVpnService"
+38-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:12:18-52
+39            android:exported="false"
+39-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:12:110-134
+40            android:foregroundServiceType="specialUse"
+40-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:12:135-177
+41            android:permission="android.permission.BIND_VPN_SERVICE" >
+41-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:12:53-109
+42            <intent-filter>
+42-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:13:13-92
+43                <action android:name="android.net.VpnService" />
+43-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:13:28-76
+43-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:13:36-73
+44            </intent-filter>
+45
+46            <property
+46-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:14:13-117
+47                android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE"
+47-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:14:23-82
+48                android:value="telemetry_proxy" />
+48-->/data/data/com.termux/files/home/ff-proxy-app/app/src/main/AndroidManifest.xml:14:83-114
+49        </service>
+50
+51        <provider
+51-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5d01eb3f21ca9c739b42b3a3c952d15c/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+52            android:name="androidx.startup.InitializationProvider"
+52-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5d01eb3f21ca9c739b42b3a3c952d15c/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+53            android:authorities="com.breadcrumb.ffproxy.androidx-startup"
+53-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5d01eb3f21ca9c739b42b3a3c952d15c/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+54            android:exported="false" >
+54-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5d01eb3f21ca9c739b42b3a3c952d15c/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+55            <meta-data
+55-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5d01eb3f21ca9c739b42b3a3c952d15c/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+56                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+56-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5d01eb3f21ca9c739b42b3a3c952d15c/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+57                android:value="androidx.startup" />
+57-->[androidx.emoji2:emoji2:1.2.0] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/5d01eb3f21ca9c739b42b3a3c952d15c/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+58            <meta-data
+58-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/fc5c30595983f3e0adea3099e7bfc074/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+59                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+59-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/fc5c30595983f3e0adea3099e7bfc074/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+60                android:value="androidx.startup" />
+60-->[androidx.lifecycle:lifecycle-process:2.4.1] /data/data/com.termux/files/home/.gradle/caches/9.9.1/transforms/fc5c30595983f3e0adea3099e7bfc074/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+61        </provider>
+62    </application>
+63
+64</manifest>
