@@ -13,19 +13,19 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-        
-      - name: Install NDK
-        run: sdkmanager "ndk;25.1.8937393"
-        
       - name: Generate Gradle Wrapper
         run: gradle wrapper --gradle-version 8.6
+        
+      - name: Accept Android SDK licenses
+        run: yes | $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager --licenses || true
+        
+      - name: Install NDK
+        run: $ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager "ndk;25.1.8937393"
         
       - name: Build APK
         run: ./gradlew assembleDebug
         env:
-          ANDROID_NDK_HOME: /usr/local/lib/android/sdk/ndk/25.1.8937393
+          ANDROID_NDK_HOME: $ANDROID_HOME/ndk/25.1.8937393
         
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
