@@ -9,8 +9,8 @@
     <application
         android:label="Junin Mods"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-        android:icon="@drawable/ic_junin_logo"
-        android:roundIcon="@drawable/ic_junin_logo">
+        android:icon="@android:drawable/ic_menu_compass"
+        android:roundIcon="@android:drawable/ic_menu_compass">
         
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
