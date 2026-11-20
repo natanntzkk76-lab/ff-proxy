@@ -1,17 +1,31 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <uses-permission android:name="android.permission.INTERNET" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.breadcrumb.ffproxy">
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_SPECIAL_USE" />
-    <application android:label="FF Proxy" android:theme="@style/Theme.AppCompat.Light">
+    
+    <application
+        android:label="Junin Mods"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:icon="@android:drawable/ic_menu_compass">
+        
         <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".FreeFireVpnService" android:permission="android.permission.BIND_VPN_SERVICE" android:exported="false" android:foregroundServiceType="specialUse">
-            <intent-filter><action android:name="android.net.VpnService" /></intent-filter>
-            <property android:name="android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE" android:value="telemetry_proxy" />
+
+        <service android:name=".ScreenCaptureService" android:foregroundServiceType="mediaProjection" android:exported="false" />
+        <service android:name=".OverlayService" android:foregroundServiceType="specialUse" android:exported="false" />
+        
+        <service android:name=".JuninAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data android:name="android.accessibilityservice" android:resource="@xml/accessibility_config" />
         </service>
     </application>
 </manifest>
